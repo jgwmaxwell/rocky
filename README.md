@@ -1,6 +1,6 @@
 # Rocky
 
-TODO: Write a gem description
+Rocky is a slugger, it's what he does, it's what he knows.
 
 ## Installation
 
@@ -18,9 +18,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Once you've installed it in your Gemfile, just run the following in your models to get all the functionality.
+
+```ruby
+extend Rocky # or include, whichever you prefer
+rocky :title, column: :slug
+```
+
+More info coming soon, including delayed execution of permalink building, auto failover to UUID/ObjectId and more.
 
 ## Contributing
+
+Contributions are always welcome, so git yer fork on! Yep, I know, I'm a funny guy.
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
