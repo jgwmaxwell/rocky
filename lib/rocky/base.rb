@@ -1,3 +1,4 @@
+require 'moped/bson/object_id'
 module Rocky
 	module Base
     attr_accessor :rocky_slug_column, :rocky_create_check_method, :rocky_fallback_id_method, :rocky_slug_field
