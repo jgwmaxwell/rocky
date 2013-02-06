@@ -12,7 +12,7 @@ module Rocky
       @rocky_slug_column = opts[:column]
       
       self.rocky_host.send :set_callback, :save, :before do |doc|
-        doc.send("#{self.class.rocky_slug_column}=", "#{Slug.new(doc).slugged}") if doc.send(self.class.rocky_create_check_method.to_sym) && doc.send("#{self.class.rocky_slug_column}.nil?")    
+        doc.send("#{self.class.rocky_slug_column}=", "#{Slug.new(doc).slugged}") if doc.send(self.class.rocky_create_check_method.to_sym) && doc.send("#{self.class.rocky_slug_column}").nil?    
       end
       
       if @rocky_fallback_id_method == :uuid || "uuid"
