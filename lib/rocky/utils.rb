@@ -1,5 +1,6 @@
 module Rocky
 	module Utils
+	  # declares the parameterized version of the model name
     def to_param
       if !send(self.class.rocky_slug_column).nil?
         self.send(self.class.rocky_slug_column)
